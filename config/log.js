@@ -28,6 +28,12 @@ if(!lv){
     lv = 'production';
 }
 
+let logDir = getEnv('LOG_PATH', '/data/logs');
+const fs = require('fs');
+if(!fs.existsSync(logDir)){
+    fs.mkdirSync(logDir, {recursive: true});
+}
+
 let winston = require('winston');
 let customLogger = new winston.Logger({
     transports: [

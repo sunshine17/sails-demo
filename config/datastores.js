@@ -13,6 +13,8 @@
  * https://sailsjs.com/config/datastores
  */
 
+console.log('===========> SAILS_DEMO_DB_URL: ' + encodeURI(process.env.SAILS_DEMO_DB_URL));
+
 module.exports.datastores = {
 
 
